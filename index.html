@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
@@ -34,7 +36,7 @@
 
         <div class="container">
             <div class="hero-text">
-                <h1>Lionel Messi<span> GOAT</span></h1>
+                <h1>Lionel Messi <span class="input">GOAT</span></h1>
                 <h4>Greatest Player of all Time</h4>
             </div>
             <div class="social">
@@ -49,5 +51,18 @@
         </div>
 
     </section>
+
+    <script src="/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+        var typed = new Typed(".input", {
+            strings:["GOAT.", "Genio.", "THE BEST.", "Magia."],
+            typeSpeed: 60,
+            backSpeed: 70,
+            loop: true
+});
+    </script>
 </body>
 </html>
