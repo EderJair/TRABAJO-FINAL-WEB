@@ -31,8 +31,7 @@
                     <ul>
                         <li><a href="">Biografia</a></li>
                         <li><a href="#sec">Trofeos</a></li>
-                        <li><a href="">Equipos</a></li>
-                        <li><a href="">Seleccion</a></li>
+                        <li><a href="#ter">Equipos</a></li>
                     </ul>
                 </div>
             </nav>
@@ -114,12 +113,41 @@
                 </div>
             </div>
         </div>
-
     </section>
 
+    <div class="container3" id="ter">
+        <center><h1>EQUIPOS:</h1></center>
+        <div class="box">
+            <h2 class="name">FC BARCELONA</h2>
+            <a href="https://www.fcbarcelona.es/es/ficha/2214377/leo-messi" target="_blank" class="buy">WEB PAGE</a>
+            <div class="circle"></div>
+            <img src="barcelona.png" class="team">
+        </div>
+
+        <div class="box">
+            <h2 class="name">PSG</h2>
+            <a href="https://es.psg.fr/equipos/primer-equipo/plantilla/lionel-messi" target="_blank" class="buy">WEB PAGE</a>
+            <div class="circle"></div>
+            <img src="psg.png" class="team">
+        </div>\
+        <center></center>
+        <button>
+            <h1>
+                CLICK EN "WEB PAGE" para ver su informacion en cada club >>>>> 
+            </h1>
+        </button>
+
+    </div>
 
     <script src="/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="vanilla-tilt.min.js"></script>
+    <script>
+        VanillaTilt.init(document.querySelectorAll(".box"), {
+            max: 25,
+            speed: 400
+        });
+    </script>
 
     <script>
         var typed = new Typed(".input", {
@@ -138,6 +166,9 @@
         navlist.classList.toggle("open");
         });
 
+        
+
     </script>
+
 </body>
 </html>
