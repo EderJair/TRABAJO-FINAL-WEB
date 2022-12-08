@@ -22,6 +22,11 @@
                 </div>
 
             <nav>
+                <div class="hamb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
                 <div class="nav-list">
                     <ul>
                         <li><a href="">Biografia</a></li>
@@ -47,7 +52,9 @@
             <i><p>
                 Unico futbolista en la historia que ha ganado,entre otras distinciones,<br> siete veces el Balón de Oro, seis premios de la FIFA al mejor jugador del mundo <br> y seis Botas de Oro.
             </p></i>
-            <button type="button">Mas de Messi</button>
+            <a href="https://www.youtube.com/watch?v=VmfLN-9aHRM" target="_blank">
+                <button type="button">Mejores Goles >>></button>
+            </a>
         </div>
 
     </section>
@@ -89,28 +96,29 @@
                 </div>
             </div>
         </div>
+
+        <div class="card2">
+            <div class="imgBx2">
+                <img src="THE_BEST-removebg-preview.png" width="100%" alt="">
+            </div>
+            <div class="contentBx2">
+                <h2> 6 PREMIOS FIFA</h2>
+                <h3>AÑO >>></h3>
+                <div class="year2">
+                    <span>2009- </span>
+                    <span>2011- </span>
+                    <span>2012- </span>
+                    <span>2016- </span>
+                    <span>2017- </span>
+                    <span>2018</span>
+                </div>
+            </div>
+        </div>
+
     </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script src="/js/script.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <script>
@@ -118,8 +126,18 @@
             strings:["GOAT.", "Genio.", "THE BEST.", "Magia."],
             typeSpeed: 70,
             backSpeed: 70,
-            loop: true
-});
+            loop: true 
+        });
+
+        var hamburger = document.querySelector(".hamb");
+        var navlist = document.querySelector(".nav-list");
+        var links = document.querySelector(".nav-list li");
+
+        hamburger.addEventListener("click", function(){
+        this.classList.toggle("click");
+        navlist.classList.toggle("open");
+        });
+
     </script>
 </body>
 </html>
