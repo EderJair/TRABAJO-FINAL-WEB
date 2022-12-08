@@ -1,5 +1,7 @@
 
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Righteous&family=Work+Sans:wght@100;200;300;400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap');
 
@@ -11,11 +13,12 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;;
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
     overflow-x: hidden;
+    background-color: black;
 }
 
 .main-width{
@@ -160,12 +163,12 @@ span{
 /*TROFEOS CONTAINER 2*/
 
 .container2 {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: black;
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     min-height: 100vh;
@@ -342,6 +345,7 @@ span{
 .container2 .card2 .contentBx2{
     position: absolute;
     bottom: 0;
+    max-width: 300px;
     width: 100%;
     height: 100px;
     text-align: center;
@@ -362,7 +366,7 @@ span{
 }
 
 .container2 .card2 .contentBx2 .year2{
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     padding: 8px 20px;
@@ -376,6 +380,169 @@ span{
     opacity: 1;
     visibility: visible;
 }
+
+.container3{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    transform-style: preserve-3d;
+}
+
+.container3 h1{
+    color: white;
+    margin: 10px;
+}
+
+.container3 p{
+    color: white;
+}
+
+.container3 button{
+    background-color: #1d80dd;
+    color: white;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    margin-left: 180px;
+    transition: all 0.5s;
+}
+
+.container3 button:hover{
+    transform: translateY(-8px);
+}
+
+.container3 .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.container3 .box::before{
+    content: 'TEAMS';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 6em;
+    font-weight: 900;
+    color: white;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container3 .box::after{
+    content: 'TEAMS';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    color: white;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container3 .box:hover::before,
+.container3 .box:hover::after{
+    opacity: 0.04;
+}
+
+.container3 .box .name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container3 .box:hover .name{
+    top: 40px;
+    opacity: 1;
+}
+
+.container3 .box .buy{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: white;
+    background: #232323;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container3 .box:hover .buy{
+    bottom: 30px;
+    opacity: 1;
+}
+
+.container3 .box .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: white;
+    transform-style: preserve-3d;
+    z-index: 10;
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 50px);
+}
+
+.container3 .box .team{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 300px;
+    transition: 0.5s;
+    z-index: 11;
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 50px) rotate(-15deg);
+}
+
+.container3 .box:hover .team{
+    transform: translate3d(-50%, -50%, 100px) rotate(-15deg);
+}
+
+
+.container3 .box:nth-child(1) .circle,
+.container3 .box:nth-child(1) .buy{
+    background: #1695b4;
+}
+
+.container3 .box:nth-child(2) .circle,
+.container3 .box:nth-child(2) .buy{
+
+    background: #206bc2;
+}
+
+
+
+
+
+
+
 
 nav .hamb{
     width: 35px;
@@ -452,4 +619,3 @@ nav .hamb span:nth-child(2){
 
 
 }
-
