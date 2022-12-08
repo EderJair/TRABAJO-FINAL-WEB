@@ -1,6 +1,11 @@
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Righteous&family=Work+Sans:wght@100;200;300;400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
 
 *{
     margin: 0;
@@ -39,6 +44,8 @@ header{
     color: white;
 }
 
+/*BARRA DE NAVEGACION*/
+
 nav .nav-list{
     list-style: none;
 }
@@ -64,6 +71,8 @@ nav .nav-list li a:hover{
     color: black;
 }
 
+/*BIOGRAFIA CONTAINER 1 */
+
 .container{
     padding-top: 160px;
     margin-left: 120px;
@@ -71,6 +80,10 @@ nav .nav-list li a:hover{
 
 .container .hero-text{
     margin-bottom: 90px;
+}
+
+.container .hero-text span{
+    color:#3062ce
 }
 
 .container .hero-text h4{
@@ -87,7 +100,7 @@ nav .nav-list li a:hover{
 }
 
 span{
-    color: rgb(56, 126, 230);
+    color: rgb(204, 230, 56);
 }
 
 .social a{
@@ -144,6 +157,8 @@ span{
     font-size: small;
 }
 
+/*TROFEOS CONTAINER 2*/
+
 .container2 {
     display: flex;
     justify-content: center;
@@ -151,6 +166,11 @@ span{
     min-height: 100vh;
     background-color: black;
     position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/messi3.jpg);
+
 }
 
 .container2 .card{
@@ -248,12 +268,6 @@ span{
 .container2 .card:hover .contentBx .year{
     opacity: 1;
     visibility: visible;
-}
-
-.container2 .card .contentBx .year span{
-    text-decoration: none;
-    color: rgb(212, 214, 57);
-
 }
 
 .container2 {
@@ -363,9 +377,79 @@ span{
     visibility: visible;
 }
 
-.container2 .card2 .contentBx2 .year2 span{
-    text-decoration: none;
-    color: rgb(212, 214, 57);
+nav .hamb{
+    width: 35px;
+    height: 24px;
+    right: 3%;
+    top: 60px;
+    z-index: 5;
+    background: transparent;
+    position: absolute;
+    cursor: pointer;
+    display: none;
+}
+
+nav .hamb span{
+    display: block;
+    background: #1d80dd;
+    width: 100%;
+    height: 3px;
+    transition: .3s;
+    transition-property: transform, opacity;
+}
+
+nav .hamb span:nth-child(2){
+    margin: 7px 0px;
+}
+
+
+/*        RESPONSIVE      */
+
+@media screen and (max-width: 930px){
+    nav .hamb{
+        display: initial;
+    }
+    .click{
+        top: 46px;
+    }
+
+    .click span{
+        position: absolute;
+        margin-top: 12px;
+    }
+
+    .click span:first-child{
+        transform: rotate(-40deg);
+    }
+
+    .click span:nth-child(2){
+        opacity: 0;
+        margin: 0;
+    }
+
+    .click span:last-child{
+        transform: rotate(40deg);
+        top: 0;
+    }
+
+    nav .nav-list{
+        position: absolute;
+        top: 90px;
+        right: -65%;
+        bottom: 0;
+        width: 60%;
+        height: 50%;
+        background: rgb(17, 35, 68);
+        z-index: 2;
+        padding: 6% 9%;
+        transition: .3s right;
+        border-radius: 10px;
+    }
+
+    nav .nav-list.open{
+        right: 0;
+    }
+
 
 }
 
